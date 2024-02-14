@@ -1,0 +1,19 @@
+{
+  "data": {
+    "id": 1,
+    "content": [
+      {
+        "element": "h1",
+        "text": "Optimizers - Gradient Descent Boosters"
+      },
+      {
+        "element": "span",
+        "description": "Optimizers techniques like RMSProps, Adam, Adagrad and SGD"
+      },
+      {
+        "element": "h2",
+        "description": "Adam"
+      }
+    ]
+  }
+}

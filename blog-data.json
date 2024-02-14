@@ -1,3 +1,19 @@
 {
-  "data": []
+  "data": [
+    {
+      "postId": 1,
+      "topic": "Optimizers - Gradient Descent Boosters",
+      "description": "Optimizers techniques like RMSProps, Adam, Adagrad and SGD"
+    },
+    {
+      "postId": 2,
+      "topic": "hyper-parameter Tuning",
+      "description": "Tuning using Grid Search, Bayesian Search and Random Search"
+    },
+    {
+      "postId": 3,
+      "topic": "Regularization Techniques",
+      "description": "Regularization techniques like using L1, L2, Dropout and early stopping"
+    }
+  ]
 }
