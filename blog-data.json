@@ -2,14 +2,14 @@
   "data": [
     {
       "postId": 1,
-      "topic": "Optimizers - Gradient Descent Boosters",
-      "description": "Optimizers techniques like RMSProps, Adam, Adagrad and SGD",
-      "image": "coming-soon-sign.jpg"
+      "topic": "Hyper-parameter Tuning",
+      "description": "Tuning using Grid Search, Bayesian Search, Hyperband and Random Search",
+      "image": "images/bayesian2.png"
     },
     {
       "postId": 2,
-      "topic": "hyper-parameter Tuning",
-      "description": "Tuning using Grid Search, Bayesian Search and Random Search",
+      "topic": "Optimizers - Gradient Descent Boosters",
+      "description": "Optimizers techniques like RMSProps, Adam, Adagrad and SGD",
       "image": "coming-soon-sign.jpg"
     },
     {
