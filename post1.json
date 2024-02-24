@@ -2,7 +2,7 @@
   "content": [
     {
       "element": "h1",
-      "text": "Hyper-parameter Tuning"
+      "description": "Hyper-parameter Tuning"
     },
     {
       "element": "p",
