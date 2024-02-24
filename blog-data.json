@@ -10,13 +10,13 @@
       "postId": 2,
       "topic": "Optimizers - Gradient Descent Boosters",
       "description": "Optimizers techniques like RMSProps, Adam, Adagrad and SGD",
-      "image": "coming-soon-sign.jpg"
+      "image": "coming-soon-sign.png"
     },
     {
       "postId": 3,
       "topic": "Regularization Techniques",
       "description": "Regularization techniques like using L1, L2, Dropout and early stopping",
-      "image": "coming-soon-sign.jpg"
+      "image": "coming-soon-sign.png"
     }
   ]
 }
