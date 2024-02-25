@@ -6,11 +6,11 @@
     },
     {
       "element": "p",
-      "description": "In machine learning, hyperparameter optimization or tuning is the problem of choosing a set of optimal hyperparameters for a learning algorithm. A hyperparameter is a parameter whose value is used to control the learning process"
+      "description": "Hyperparameters are the parameters for the model's training unlike parameters which defines the model. With the right hyperparameter cost function can converge to the minimum faster. Few examples of hyperparameters are learning rate Alpha or Momentum rate, the number of hidden layers and the number of neurons or the number of epochs in training. using the wrong choices of hyperparameters result in cost function never converging or taking excessive time for cost value to converge to a point which also increases the cost of the training."
     },
     {
       "element": "p",
-      "description": "Hyperparameter tuning allows data scientists to tweak model performance for optimal results. This process is an essential part of machine learning, and choosing appropriate hyperparameter values is crucial for success. For example, assume you're using the learning rate of the model as a hyperparameter."
+      "description": "Hyperparameter sometimes needs logarithmic transformation or inverse logarithm transformation for cases where sensitive at each point are not the same. For example, learning rate is more sensitive near zero and less insensitive near one."
     },
     {
       "element": "h2",
@@ -18,15 +18,23 @@
     },
     {
       "element": "p",
-      "description": "Grid Search uses a different combination of all the specified hyperparameters and their values and calculates the performance for each combination and selects the best value for the hyperparameters. This makes the processing time-consuming and expensive based on the number of hyperparameters involved."
+      "description": "Grid search is the simplest hyperparameter tuning where it creates a grid of value and uses the brute force method to find hyperparameter combinations which optimises the cost function. grid search can be used when the hyperparameter space is less to search."
     },
     {
       "element": "img",
       "description": "/images/grid-search.png"
     },
     {
+      "element": "p",
+      "description": "It misses the optimal hyperparameter values when it minimum of cost value falls in between the grid as soon in diagram. This is not suitable for large models."
+    },
+    {
       "element": "img",
       "description": "/images/grid-pred.png"
+    },
+    {
+      "element": "p",
+      "description": "Grid Search can operate parallel but it gets very expensive for large models. And most of the time it doesn’t make sense to search the whole hyperparameter space to find the hyperparameter that reduces the cost"
     },
     {
       "element": "h2",
@@ -34,15 +42,23 @@
     },
     {
       "element": "p",
-      "description": "Random searches are very similar to grid searches. However, instead of testing every combination of hyperparameters, random searches only test a certain number of combinations that are selected randomly."
+      "description": "Random Search method selects values at random unlike grid search and uses the best values to find hyperparameter combinations which optimises the cost function. Random search can be used when the hyperparameter space is less to search."
     },
     {
       "element": "img",
       "description": "/images/random-search.png"
     },
     {
+      "element": "p",
+      "description": "Like Grid Search random search misses the optimal hyperparameter values when it minimum of cost value falls in random generated space as soon in diagram. This is not suitable for large models."
+    },
+    {
       "element": "img",
       "description": "/images/random-pred.png"
+    },
+    {
+      "element": "p",
+      "description": "Random search can operate parallel but it gets very expensive for large models. And most of the time it doesn’t make sense to search randomly the whole hyperparameter space to find the hyperparameter that reduces the cost."
     },
     {
       "element": "h2",
@@ -50,15 +66,31 @@
     },
     {
       "element": "p",
-      "description": "Hyperparameter tuning by means of Bayesian reasoning, or Bayesian Optimisation, can bring down the time spent to get to the optimal set of parameters — and bring better generalisation performance on the test set."
+      "description": "Because grid and random search examine a large number of inappropriate hyperparameter combinations without taking the outcomes of earlier rounds into account, grid search and random search are frequently inefficient. Conversely, the search for the most suitable hyperparameters is viewed as an optimization problem in Bayesian optimization. When choosing the next set of hyperparameters, it takes into account the evaluation findings from the previous run and uses a probability function to determine which combination is most likely to produce the most beneficial results. With relatively few iterations, this approach finds an effective combination of hyperparameters."
+    },
+    {
+      "element": "p",
+      "description": "This uses the surrogate function which tries to find the objective function. Here objective function is the cost function to find the optimal cost. In the diagram the blue curve is objective function and red curve is the surrogate function which is build using the 5 green dots of hyperparameter space search. The pink area is the uncertainty area and the aim of the Bayesian tuning is to minimize the pink area so that it covers all the uncertainty in space and finds the optimal combination of the hyperparameters in less time."
     },
     {
       "element": "img",
       "description": "/images/bayesian1.png"
     },
     {
+      "element": "p",
+      "description": "The new combination of the hyperparameter is picked by using the previous results of the graph so that new surrogate function is mapped where uncertainty is reduced and reduces the pink area."
+    },
+    {
+      "element": "code",
+      "description": "P(score|h1, h2) = P(score|h1) * new score with h2"
+    },
+    {
       "element": "img",
       "description": "/images/bayesian1.png"
+    },
+    {
+      "element": "p",
+      "description": "This method helps the cost function to converge faster with few minimum points in the space and this uses the sequential process to find the hyperparameters. This is not optimal for very huge models since this run-in sequence and takes time to find each point with sequential model and this cannot be parallelized."
     },
     {
       "element": "h2",
@@ -66,11 +98,19 @@
     },
     {
       "element": "p",
-      "description": "The Hyperband tuning algorithm uses adaptive resource allocation and early-stopping to quickly converge on a high-performing model."
+      "description": "Bayesian search is not optimal for huge model since it needs to explore lot of space and most of the time it doesn’t start close to where the minimum cost exists and explores the area which doesn’t have a good performing hyperparameter. Hyperband uses the random search to with elimination process. It uses early stopping for the hyperparameters area which is underperforming and uses only the good performing values of hyperparameter. And it runs with parallel jobs. Hyperband uses both intermediate and final results of training jobs to re-allocate epochs to well-utilized hyperparameter configurations and automatically stops those that underperform and dynamically reallocates resources."
     },
     {
       "element": "img",
       "description": "/images/hyperband.png"
+    },
+    {
+      "element": "h2",
+      "description": "Conclusion"
+    },
+    {
+      "element": "p",
+      "description": "If the model is large with limited compute resource go with Hyperband, if the model is relatively smaller or medium with limited resource go with Bayesian Search. If the model is small and sensitive in hyperparameters go with random search or use grid search for simple model and don’t have resource limits."
     }
   ]
 }
