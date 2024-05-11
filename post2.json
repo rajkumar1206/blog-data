@@ -1,0 +1,78 @@
+{
+  "content": [
+    {
+      "element": "h1",
+      "description": "Optimizers - Gradient Descent Boosters"
+    },
+    {
+      "element": "p",
+      "description": "Gradient Descent is a time consuming process and sometimes we need to boost these algorithms so that we can minimize the cost function rapidly"
+    },
+    {
+      "element": "h2",
+      "description": "Momentum based gradient decent"
+    },
+    {
+      "element": "p",
+      "description": "It use the momentum of the minimizing the cost function from the previous steps"
+    },
+    {
+      "element": "img",
+      "description": "/images/momentum.jpg"
+    },
+    {
+      "element": "h2",
+      "description": "RMS Props"
+    },
+    {
+      "element": "p",
+      "description": "It uses the root mean square method of the momentum"
+    },
+    {
+      "element": "img",
+      "description": "/images/rmsprops.jpg"
+    },
+    {
+      "element": "h2",
+      "description": "Adam"
+    },
+    {
+      "element": "p",
+      "description": "It uses the combination of RMSProps and the momentum based Optimizers"
+    },
+    {
+      "element": "img",
+      "description": "/images/adam.jpg"
+    },
+    {
+      "element": "h2",
+      "description": "Mini-Batch vs Batch vs Stochastic Gradient decent"
+    },
+    {
+      "element": "p",
+      "description": "Mini batch overcomes the local minima"
+    },
+    {
+      "element": "img",
+      "description": "/images/batch-gd.jpg"
+    },
+
+    {
+      "element": "img",
+      "description": "/images/sgd.jpg"
+    },
+
+    {
+      "element": "img",
+      "description": "/images/mini-batch-gd.jpg"
+    },
+    {
+      "element": "h2",
+      "description": "Conclusion"
+    },
+    {
+      "element": "p",
+      "description": "If the model is large with limited compute resource go with Hyperband, if the model is relatively smaller or medium with limited resource go with Bayesian Search. If the model is small and sensitive in hyperparameters go with random search or use grid search for simple model and don’t have resource limits."
+    }
+  ]
+}
