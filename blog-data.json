@@ -14,6 +14,12 @@
     },
     {
       "postId": 3,
+      "topic": "Positional Encoding - Transformers",
+      "description": "How sine and cosine changed the whole AI generations",
+      "image": "coming-soon.png"
+    },
+    {
+      "postId": 4,
       "topic": "Regularization Techniques",
       "description": "Regularization techniques like using L1, L2, Dropout and early stopping",
       "image": "coming-soon.png"
