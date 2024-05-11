@@ -72,7 +72,7 @@
     },
     {
       "element": "p",
-      "description": "If the model is large with limited compute resource go with Hyperband, if the model is relatively smaller or medium with limited resource go with Bayesian Search. If the model is small and sensitive in hyperparameters go with random search or use grid search for simple model and don’t have resource limits."
+      "description": "Mini-Batch with the Adam works best for the gradient optimizers since it is faster and overcomes local minima"
     }
   ]
 }
